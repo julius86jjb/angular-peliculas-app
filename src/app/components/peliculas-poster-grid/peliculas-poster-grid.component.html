@@ -2,18 +2,18 @@
     <div class="col-md-3 mb-5 animate__animated animate__fadeIn" *ngFor="let movie of movies">
 
         <img [src]="movie.poster_path | poster"
-             class="img-fluid poster"
+             class="img-fluid poster clickable"
              (click)="onMovieClick( movie )">
-        
+
         <div>
-            <h3>{{ movie.title }}</h3>
-            <div class="row">
+            <h3 class="clickable">{{ movie.title }}</h3>
+            <div class="row clickable">
                 <div class="col-10 text-white">
-                    <star-rating [value]="movie.vote_average" 
+                    <star-rating [value]="movie.vote_average"
                                 totalstars="10"
-                                checkedcolor="yellow" 
-                                uncheckedcolor="grey" 
-                                size="14px" 
+                                checkedcolor="yellow"
+                                uncheckedcolor="grey"
+                                size="14px"
                                 readonly="false"></star-rating>
 
                 </div>
